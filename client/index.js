@@ -25,10 +25,7 @@ async function steamData () {
   mediaRecorder.addEventListener('dataavailable', (e) => {
     connection.send(e.data);
   });
-  mediaRecorder.start();
-  window.time = setInterval(() => {
-    mediaRecorder.requestData()
-  }, 2000);
+  mediaRecorder.start(250);
 }
 
 steamData()
